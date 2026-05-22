@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/newRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFEB3B"
+        android:text="PLAY AGAIN"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/cmBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58000004" />
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFEB3B"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guess" />
+
+    <EditText
+        android:id="@+id/guess"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Enter a 3 digit number..."
+        android:inputType="number"
+        android:maxLength="3"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/guessButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toTopOf="@+id/guess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elapsedTimeTV">
+
+
+        <!-- Row 1 with single column -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+
+        </TableRow>
+
+        <!-- Row 2 with 3 columns -->
+
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TextView12"
+                android:layout_weight="1"
+                android:background="#F44336"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Your  Number"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/TextView13"
+                android:layout_weight="1"
+                android:background="#03A9F4"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Digits Correct"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/TextView14"
+                android:layout_weight="1"
+                android:background="#4CAF50"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Places Correct"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <!-- Row 3 with 3 columns -->
+
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/oneone"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FA8881"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/onetwo"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#82D8FF"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+
+                android:id="@+id/onethree"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#42F34E"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/twoone"
+                android:layout_weight="1"
+                android:background="#FFFA8881"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/twotwo"
+                android:layout_weight="1"
+                android:background="#FF82D8FF"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+
+                android:id="@+id/twothree"
+                android:layout_weight="1"
+                android:background="#FF42F34E"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/threeone"
+                android:layout_weight="1"
+                android:background="#FFFA8881"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/threetwo"
+                android:layout_weight="1"
+                android:background="#FF82D8FF"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+
+                android:id="@+id/threethree"
+                android:layout_weight="1"
+                android:background="#FF42F34E"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fourone"
+                android:layout_weight="1"
+                android:background="#FFFA8881"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/fourtwo"
+                android:layout_weight="1"
+                android:background="#FF82D8FF"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+
+                android:id="@+id/fourthree"
+                android:layout_weight="1"
+                android:background="#FF42F34E"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fiveone"
+                android:layout_weight="1"
+                android:background="#FFFA8881"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/fivetwo"
+                android:layout_weight="1"
+                android:background="#FF82D8FF"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+
+                android:id="@+id/fivethree"
+                android:layout_weight="1"
+                android:background="#FF42F34E"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sixone"
+                android:layout_weight="1"
+                android:background="#FFFA8881"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/sixtwo"
+                android:layout_weight="1"
+                android:background="#FF82D8FF"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <TextView
+
+                android:id="@+id/sixthree"
+                android:layout_weight="1"
+                android:background="#FF42F34E"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="-"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/elapsedTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elapsed Time: 00:00"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmBanner" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/cmBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-8356994243159260/9395587294"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newRound"
+        app:layout_constraintBottom_toTopOf="@+id/elapsedTimeTV"
+        tools:layout_editor_absoluteY="79dp"></com.google.android.gms.ads.AdView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

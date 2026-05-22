@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 34
+    namespace "com.example.newapplicationsummer2019"
+
+    defaultConfig {
+        applicationId 'com.connor.newapplicationsummer2019'
+        minSdkVersion 21
+        targetSdkVersion 35
+        versionCode 27
+        versionName '2025.10.20-2'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Core AndroidX dependencies
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Import the Firebase BoM to keep all Firebase libs in sync
+    implementation platform('com.google.firebase:firebase-bom:33.5.1')
+
+    // Firebase libraries (no version numbers here!)
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-database'
+
+    // Ads SDK — updated and compatible with Firebase BoM 33.5.1
+    implementation 'com.google.android.gms:play-services-ads:23.3.0'
+
+    // Test dependencies
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
