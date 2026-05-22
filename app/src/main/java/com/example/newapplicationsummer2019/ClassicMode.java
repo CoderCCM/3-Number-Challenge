@@ -314,7 +314,7 @@ public class ClassicMode extends AppCompatActivity {
 
     class handleClick2 implements View.OnClickListener {
         public void onClick(View arg0) {
-            if (newRound.getText().toString() == "PLAY AGAIN" || seconds == 0) {
+            if (newRound.getText().toString().equals("PLAY AGAIN") || seconds == 0) {
                 if (gameCounter == 0) {
                     AlertDialog alertDialog2 = new AlertDialog.Builder(ClassicMode.this).create();
                     alertDialog2.setTitle("A Mystery Number has been Chosen");
