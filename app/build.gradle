@@ -9,9 +9,9 @@ android {
     defaultConfig {
         applicationId 'com.connor.newapplicationsummer2019'
         minSdkVersion 23
-        targetSdkVersion 35
-        versionCode 28
-        versionName '2026.05.21'
+        targetSdkVersion 36
+        versionCode 30
+        versionName '2026.08.11'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         multiDexEnabled true
     }
